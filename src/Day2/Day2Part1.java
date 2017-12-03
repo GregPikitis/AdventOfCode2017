@@ -22,21 +22,14 @@ public class Day2Part1 {
             String[] nums = line.split("\t");
 
             for (int i = 0; i < nums.length; i++){
-            	System.out.println("i: " + i);
                 if (Integer.parseInt(nums[i]) > highNum){
-                	System.out.println("Num is higher than current high num.");
                     highNum = Integer.parseInt(nums[i]);
-                    System.out.println("High num is now " + highNum);
                 }
                 if (Integer.parseInt(nums[i]) < lowNum){
-					System.out.println("Num is lower than current low num.");
 					lowNum = Integer.parseInt(nums[i]);
-					System.out.println("lowNum is now: " + lowNum);
                 }
             }
-			System.out.println("Adding current checksum to difference,");
             checkSum = checkSum + (highNum - lowNum);
-            System.out.println("Checksum is now: " + checkSum);
         }
         System.out.println("The Checksum is: " + checkSum);
     }
