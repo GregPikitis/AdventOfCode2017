@@ -21,14 +21,14 @@ public class Day2Part1 {
 
             String[] nums = line.split("\t");
 
-            for (int i = 0; i < nums.length; i++){
-                if (Integer.parseInt(nums[i]) > highNum){
-                    highNum = Integer.parseInt(nums[i]);
-                }
-                if (Integer.parseInt(nums[i]) < lowNum){
-					lowNum = Integer.parseInt(nums[i]);
-                }
-            }
+			for (String num : nums) {
+				if (Integer.parseInt(num) > highNum) {
+					highNum = Integer.parseInt(num);
+				}
+				if (Integer.parseInt(num) < lowNum) {
+					lowNum = Integer.parseInt(num);
+				}
+			}
             checkSum = checkSum + (highNum - lowNum);
         }
         System.out.println("The Checksum is: " + checkSum);
