@@ -31,6 +31,6 @@ public class Day2Part1 {
 			}
             checkSum = checkSum + (highNum - lowNum);
         }
-        System.out.println("The Checksum is: " + checkSum);
+        System.out.println("Checksum: " + checkSum);
     }
 }
